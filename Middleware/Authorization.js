@@ -1,3 +1,5 @@
+require("dotenv/config");
+
 function Authorization(req, res, next) {
     if (process.env.IMAGE_API_KEY === req.headers.image_api_key) {
         next()

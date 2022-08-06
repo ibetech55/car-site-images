@@ -20,6 +20,7 @@ app.use(
 
 app.post('/images', Authorization, (req, res) => {
     const { imageName } = req.body;
+    console.log(imageName)
     let base64String = req.body.image;
     let base64Image = base64String.split(';base64,').pop();
 
